@@ -73,7 +73,7 @@ const Typewriter = ({
 
 const Home = () => {
   // Placeholder for your profile picture URL
-  const profilePictureUrl = "src/images/profile4.jpg"; // Update this path to your actual image
+  const profilePictureUrl = "../images/profile4.jpg"; // Update this path to your actual image
   // You can replace this with a real image path or a dynamic image URL
   return (
     // Main container for the home page, styled with Tailwind.
