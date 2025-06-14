@@ -95,10 +95,7 @@ const Home = () => {
     `,
         }}
       >
-        <div>
-          {" "}
-          <Robot />
-        </div>
+        <div> {/* <Robot /> */}</div>
         {/* Adjusted space-y-8 for vertical spacing between content elements */}
         <div className="flex-grow space-y-8 text-center md:text-left">
           {" "}
