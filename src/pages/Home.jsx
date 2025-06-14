@@ -86,7 +86,7 @@ const Home = () => {
       {/* Hero Section - now acts as the centered glass-effect box */}
       <section
         className="flex flex-col md:flex-row items-center justify-between py-16 px-6 md:px-12 bg-white/10 backdrop-blur-lg rounded-2xl shadow-xl space-y-8 md:space-y-0 md:space-x-12
-              max-w-6xl w-full transition-all duration-300 ease-in-out hover:shadow-2xl text-center border border-white/20 overflow-hidden"
+          max-w-6xl w-full transition-all duration-300 ease-in-out hover:shadow-2xl text-center border border-white/20 overflow-hidden"
         style={{
           boxShadow: `
       inset 0 0 30px rgba(0, 0, 0, 0.4),
@@ -95,7 +95,13 @@ const Home = () => {
     `,
         }}
       >
-        <div> {/* <Robot /> */}</div>
+        {/*
+          Use 'hidden' to hide on mobile (small screens) and 'md:block' to show on medium screens and up.
+        */}
+        <div className="hidden md:block">
+          <Robot />
+        </div>
+
         {/* Adjusted space-y-8 for vertical spacing between content elements */}
         <div className="flex-grow space-y-8 text-center md:text-left">
           {" "}
