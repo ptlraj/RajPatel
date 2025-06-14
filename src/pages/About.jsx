@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import profilePic from "../images/profile4.jpg"; // Update the path if needed
+import profilePic from "/images/profile4.jpg"; // Update the path if needed
 
 function About() {
   const sectionVariants = {

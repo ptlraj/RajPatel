@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Robot from "../pages/Robot"; // Importing the Robot component
-import profilePictureUrl from "../images/profile.jpg"; // Update this path to your actual image
+import profilePictureUrl from "/images/profile.jpg"; // Update this path to your actual image
 // Typewriter component for dynamic text display
 const Typewriter = ({
   words,
