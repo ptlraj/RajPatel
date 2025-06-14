@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Robot from "../pages/Robot"; // Importing the Robot component
+import profilePictureUrl from "../images/profile.jpg"; // Update this path to your actual image
 // Typewriter component for dynamic text display
 const Typewriter = ({
   words,
@@ -73,7 +74,7 @@ const Typewriter = ({
 
 const Home = () => {
   // Placeholder for your profile picture URL
-  const profilePictureUrl = "../images/profile4.jpg"; // Update this path to your actual image
+
   // You can replace this with a real image path or a dynamic image URL
   return (
     // Main container for the home page, styled with Tailwind.
