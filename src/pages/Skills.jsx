@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// 🔁 Step 1: Import all images from src/images/
 import reactImg from "../images/react.png";
 import nodeImg from "../images/node.png";
 import expressImg from "../images/express.png";
@@ -49,7 +48,6 @@ const cardHover = {
   transition: { duration: 0.3, ease: "easeOut" },
 };
 
-// 🔁 Step 2: Define skills array using imported images
 const skills = [
   {
     name: "React.js",
