@@ -9,7 +9,7 @@ function Experience() {
       date: "Jan 2025 - May 2025",
       details:
         "Developed a full-featured e-commerce website using PHP, Bootstrap, jQuery, AJAX, and MySQL. Implemented dual-role functionality for Admin and User to enable role-based access and features. Integrated an OTP-based login and registration system via email for secure user authentication and incorporated Razorpay API for seamless online payment processing.",
-      certificateUrl: "src/certificates/rajbits.pdf",
+      certificateUrl: "/certificates/rajbits.pdf",
     },
     {
       position: "Intern Web Developer",
@@ -17,7 +17,7 @@ function Experience() {
       date: "May 2024 - June 2024",
       details:
         "Developed a Community Investment Platform using React.js for the frontend and Node.js for the backend. Utilized PostgreSQL for efficient data management and integrated multiple APIs to enhance functionality and user interactivity.",
-      certificateUrl: "src/certificates/raj_tatvasoft.pdf",
+      certificateUrl: "/certificates/raj_tatvasoft.pdf",
     },
   ];
 
@@ -28,16 +28,16 @@ function Experience() {
       date: "2021-2025",
       cgpa: "8.66 CGPA",
       semesterFiles: [
-        "src/certificates/sem1.pdf",
-        "src/certificates/sem2.pdf",
-        "src/certificates/sem3.pdf",
-        "src/certificates/sem4.pdf",
-        "src/certificates/sem5.pdf",
-        "src/certificates/sem6.pdf",
-        "src/certificates/sem7.pdf",
-        "src/certificates/sem8.pdf",
+        "/certificates/sem1.pdf",
+        "/certificates/sem2.pdf",
+        "/certificates/sem3.pdf",
+        "/certificates/sem4.pdf",
+        "/certificates/sem5.pdf",
+        "/certificates/sem6.pdf",
+        "/certificates/sem7.pdf",
+        "/certificates/sem8.pdf",
       ],
-      fileUrl: "src/certificates/degree.pdf",
+      fileUrl: "/certificates/degree.pdf",
     },
     {
       title: "Minor Degree, Internet Of Things",
@@ -45,26 +45,26 @@ function Experience() {
       date: "2022-2024",
       cgpa: "7.66 CGPA",
       semesterFiles: [
-        "src/certificates/sem3IOT.pdf",
-        "src/certificates/sem4IOT.pdf",
-        "src/certificates/sem5IOT.pdf",
-        "src/certificates/sem6IOT.pdf",
+        "/certificates/sem3IOT.pdf",
+        "/certificates/sem4IOT.pdf",
+        "/certificates/sem5IOT.pdf",
+        "/certificates/sem6IOT.pdf",
       ],
-      fileUrl: "src/certificates/degree.pdf",
+      fileUrl: "/certificates/degree.pdf",
     },
     {
       title: "12th Grade Marksheet",
       institute: "Sarvodaya High School, Ankleshwar",
       date: "2021",
       percentage: "76.30%",
-      fileUrl: "src/certificates/12.pdf",
+      fileUrl: "/certificates/12.pdf",
     },
     {
       title: "10th Grade Marksheet",
       institute: "Smt K.V. Mangukiya School, Surat",
       date: "2019",
       percentage: "79.50%",
-      fileUrl: "src/certificates/10.pdf",
+      fileUrl: "/certificates/10.pdf",
     },
   ];
 
