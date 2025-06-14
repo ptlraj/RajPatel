@@ -42,39 +42,39 @@ function About() {
 
           {/* Text Content */}
           <div className="text-center md:text-left">
-            <div className="mt-6 text-sm leading-relaxed text-gray-200 space-y-3 text-left">
-              <div className="flex items-start gap-2">
-                <span className="font-medium text-blue-300 w-24">Name:</span>
-                <span>Raj Vijaybhai Patel</span>
+            {/* --- CHANGE STARTS HERE --- */}
+            <dl className="mt-6 text-sm leading-relaxed text-gray-200 space-y-3 text-left">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-2">
+                <dt className="font-medium text-blue-300 sm:w-24">Name:</dt>
+                <dd>Raj Vijaybhai Patel</dd>
               </div>
-              <div className="flex items-start gap-2">
-                <span className="font-medium text-blue-300 w-24">Age:</span>
-                <span>22</span>
+              <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-2">
+                <dt className="font-medium text-blue-300 sm:w-24">Age:</dt>
+                <dd>22</dd>
               </div>
-              <div className="flex items-start gap-2">
-                <span className="font-medium text-blue-300 w-24">From:</span>
-                <span>Bharuch, Gujarat, India</span>
+              <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-2">
+                <dt className="font-medium text-blue-300 sm:w-24">From:</dt>
+                <dd>Bharuch, Gujarat, India</dd>
               </div>
-              <div className="flex items-start gap-2">
-                <span className="font-medium text-blue-300 w-24">Stack:</span>
-                <span>MERN Stack Developer, Php Developer</span>
+              <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-2">
+                <dt className="font-medium text-blue-300 sm:w-24">Stack:</dt>
+                <dd>MERN Stack Developer, Php Developer</dd>
               </div>
-              <div className="flex items-start gap-2">
-                <span className="font-medium text-blue-300 w-24">
-                  Explored:
-                </span>
-                <span>Angular, Laravel</span>
+              <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-2">
+                <dt className="font-medium text-blue-300 sm:w-24">Explored:</dt>
+                <dd>Angular, Laravel</dd>
               </div>
-              <div className="flex items-start gap-2">
-                <span className="font-medium text-blue-300 w-24">Goal:</span>
-                <span>Build elegant, problem-solving digital experiences</span>
+              <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-2">
+                <dt className="font-medium text-blue-300 sm:w-24">Goal:</dt>
+                <dd>Build elegant, problem-solving digital experiences</dd>
               </div>
-            </div>
+            </dl>
+            {/* --- CHANGE ENDS HERE --- */}
 
             {/* Buttons */}
             <div className="flex flex-col md:flex-row md:items-center gap-4 mt-4">
               <a
-                href="src/certificates/rajresume.pdf"
+                href="/certificates/rajresume.pdf"
                 download
                 className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-medium transition"
               >
