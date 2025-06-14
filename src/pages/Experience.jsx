@@ -4,67 +4,80 @@ import { useState } from "react";
 function Experience() {
   const experiences = [
     {
-      position: "Php Developer",
+      position: "PHP Developer",
       company: "Bits Infotech, Ahmedabad, Gujarat, India",
       date: "Jan 2025 - May 2025",
-      details:
-        "Developed a full-featured e-commerce website using PHP, Bootstrap, jQuery, AJAX, and MySQL. Implemented dual-role functionality for Admin and User to enable role-based access and features. Integrated an OTP-based login and registration system via email for secure user authentication and incorporated Razorpay API for seamless online payment processing.",
-      certificateUrl: "/certificates/rajbits.pdf",
+      details: [
+        "Developed a full-featured e-commerce website using PHP, Bootstrap, jQuery, AJAX, and MySQL.",
+        "Implemented dual-role functionality for Admin and User.",
+        "Integrated OTP-based email authentication for login and registration.",
+        "Integrated Razorpay API for secure online payments.",
+      ],
+      documentUrl: "/certificates/rajbits.pdf", // Changed to documentUrl
+      documentType: "Certificate", // Added documentType
     },
     {
       position: "Intern Web Developer",
       company: "Tatvasoft, Ahmedabad, Gujarat, India",
       date: "May 2024 - June 2024",
-      details:
-        "Developed a Community Investment Platform using React.js for the frontend and Node.js for the backend. Utilized PostgreSQL for efficient data management and integrated multiple APIs to enhance functionality and user interactivity.",
-      certificateUrl: "/certificates/raj_tatvasoft.pdf",
-    },
-  ];
-
-  const marksheets = [
-    {
-      title: "Bachelor of Engineering, Information Technology",
-      institute: "A D Patel Institute Of Technology, Anand",
-      date: "2021-2025",
-      cgpa: "8.66 CGPA",
-      semesterFiles: [
-        "/certificates/sem1.pdf",
-        "/certificates/sem2.pdf",
-        "/certificates/sem3.pdf",
-        "/certificates/sem4.pdf",
-        "/certificates/sem5.pdf",
-        "/certificates/sem6.pdf",
-        "/certificates/sem7.pdf",
-        "/certificates/sem8.pdf",
+      details: [
+        "Project: Community Investment Platform",
+        "Implemented using React.js for the frontend and Node.js for the backend.",
+        "Leveraged PostgreSQL as the database to ensure reliable and efficient data management.",
+        "Integrated various APIs to enhance the website’s functionality and interactivity.",
       ],
-      fileUrl: "/certificates/degree.pdf",
+      documentUrl: "/certificates/raj_tatvasoft.pdf", // Changed to documentUrl
+      documentType: "Certificate", // Added documentType
     },
     {
-      title: "Minor Degree, Internet Of Things",
-      institute: "A D Patel Institute Of Technology, Anand",
-      date: "2022-2024",
-      cgpa: "7.66 CGPA",
-      semesterFiles: [
-        "/certificates/sem3IOT.pdf",
-        "/certificates/sem4IOT.pdf",
-        "/certificates/sem5IOT.pdf",
-        "/certificates/sem6IOT.pdf",
+      position: "Student (B.E. in IT)",
+      company: "A D Patel Institute Of Technology, Anand, Gujarat, India",
+      date: "Jun 2021 - May 2025",
+      details: [
+        "Pursued a Bachelor’s degree in Information Technology.",
+        "Worked on multiple academic projects including a feature-rich e-commerce system with secure authentication and payment integration.",
       ],
-      fileUrl: "/certificates/degree.pdf",
+      percentage: "8.66 CGPA",
+      documentUrl: "/certificates/rajbits.pdf", // Changed to documentUrl
+      documentType: "Marksheet", // Set to Marksheet
     },
     {
-      title: "12th Grade Marksheet",
-      institute: "Sarvodaya High School, Ankleshwar",
-      date: "2021",
-      percentage: "76.30%",
-      fileUrl: "/certificates/12.pdf",
+      position: "Student (Minor Degree in IoT)",
+      company: "A D Patel Institute Of Technology, Anand, Gujarat, India",
+      date: "Jun 2022 - May 2024",
+      details: [
+        "Completed a Minor Degree in Internet of Things (IoT) focusing on connected devices and smart systems.",
+        "Gained practical experience in **sensor integration, embedded systems, and data communication protocols** (e.g., MQTT, HTTP).",
+        "Developed **IoT-based projects** involving data collection from various sensors and real-time monitoring.",
+        "Explored concepts of **cloud-based IoT platforms** and their application in smart environments.",
+      ],
+      percentage: "7.50 CGPA",
+      documentUrl: "/certificates/rajbits.pdf", // Assuming this is the correct path for the marksheet
+      documentType: "Marksheet",
     },
     {
-      title: "10th Grade Marksheet",
-      institute: "Smt K.V. Mangukiya School, Surat",
-      date: "2019",
+      position: "Student (12th Science)",
+      company: "Sarvodaya High School, Ankleshwar, Gujarat, India",
+      date: "Jun 2020 - May 2021",
+      details: [
+        "Completed Higher Secondary Education in the Science stream.",
+        "Focused on Mathematics and Computer Science.",
+      ],
+      percentage: "76.73%",
+      documentUrl: "/certificates/12.pdf", // Changed to documentUrl
+      documentType: "Marksheet", // Set to Marksheet
+    },
+    {
+      position: "Student (10th Grade)",
+      company: "Smt K.V. Mangukiya School, Surat, Gujarat, India",
+      date: "Jun 2018 - May 2019",
+      details: [
+        "Completed Secondary School Certificate (SSC).",
+        "Core subjects included Mathematics and Science.",
+      ],
       percentage: "79.50%",
-      fileUrl: "/certificates/10.pdf",
+      documentUrl: "/certificates/10.pdf", // Changed to documentUrl
+      documentType: "Marksheet", // Set to Marksheet
     },
   ];
 
@@ -98,10 +111,9 @@ function Experience() {
 
   return (
     <>
-      {/* Experience Section */}
       <section
         id="experience"
-        className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-black py-12"
+        className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-black py-16 pt-24"
       >
         <motion.div
           className="container mx-auto px-4 relative z-10"
@@ -114,8 +126,6 @@ function Experience() {
             My Experience
           </h2>
           <div className="relative max-w-2xl mx-auto mb-24">
-            {" "}
-            {/* Changed mb-16 to mb-24 */}
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="w-0.5 h-full bg-gradient-to-b from-blue-500 to-gray-700 opacity-70"></div>
             </div>
@@ -129,37 +139,44 @@ function Experience() {
                   variants={cardVariants}
                   whileHover="hover"
                 >
+                  {/* Desktop Certificate/Marksheet Link */}
                   <div
                     className={`hidden sm:block absolute top-1/2 transform -translate-y-1/2 ${
                       index % 2 === 0 ? "-left-10" : "-right-10"
                     }`}
                   >
                     <a
-                      href={exp.certificateUrl}
+                      href={exp.documentUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-6 h-24 bg-blue-500 hover:bg-blue-600 flex items-center justify-center rounded-md shadow-md transition-all duration-300"
-                      title="View Certificate"
+                      title={`View ${exp.documentType}`} // Conditional title
                     >
                       <span className="text-white text-xs transform -rotate-90 whitespace-nowrap">
-                        Certificate
+                        {exp.documentType} {/* Conditional text */}
                       </span>
                     </a>
                   </div>
 
+                  {/* Mobile Certificate/Marksheet Link */}
                   <div className="sm:hidden mt-4">
                     <a
-                      href={exp.certificateUrl}
+                      href={exp.documentUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full inline-block bg-blue-500 hover:bg-blue-600 text-center text-white text-sm py-2 rounded-md shadow-md transition-all duration-300"
                     >
-                      View Certificate
+                      View {exp.documentType} {/* Conditional text */}
                     </a>
                   </div>
 
                   <h3 className="text-lg font-semibold text-blue-300 mb-1">
                     {exp.position}
+                    {exp.percentage && (
+                      <span className="ml-2 px-2 py-0.5 bg-blue-700 text-blue-100 rounded-full text-xs font-medium">
+                        {exp.percentage}
+                      </span>
+                    )}
                   </h3>
                   <p className="text-sm text-gray-400">{exp.company}</p>
                   <p className="text-xs text-gray-500 mb-2">{exp.date}</p>
@@ -176,84 +193,16 @@ function Experience() {
                       transition={{ duration: 0.3 }}
                       className="mt-2 text-gray-300 text-sm"
                     >
-                      {exp.details}
+                      <ul className="list-disc pl-5 space-y-1">
+                        {exp.details.map((detail, detailIndex) => (
+                          <li key={detailIndex}>{detail}</li>
+                        ))}
+                      </ul>
                     </motion.div>
                   )}
                 </motion.div>
               ))}
             </div>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Marksheet Section */}
-      <section className="bg-black py-12">
-        <motion.div
-          className="container mx-auto px-4"
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl font-bold text-center mb-10 text-green-300 tracking-tight">
-            My Marksheets
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
-            {" "}
-            {/* Changed mb-16 to mb-24 */}
-            {marksheets.map((sheet, index) => (
-              <motion.div
-                key={index}
-                className="bg-gray-800 p-5 rounded-lg border border-green-600/30 shadow-md w-full"
-                variants={cardVariants}
-                whileHover="hover"
-              >
-                <h3 className="text-lg font-semibold text-green-300 mb-1">
-                  {sheet.title}
-                </h3>
-                <p className="text-sm text-gray-400">{sheet.institute}</p>
-                <p className="text-xs text-gray-500">{sheet.date}</p>
-
-                {sheet.cgpa && (
-                  <p className="text-sm text-gray-300 mt-2">
-                    <strong>CGPA:</strong> {sheet.cgpa}
-                  </p>
-                )}
-                {sheet.percentage && (
-                  <p className="text-sm text-gray-300 mt-2">
-                    <strong>Percentage:</strong> {sheet.percentage}
-                  </p>
-                )}
-
-                {sheet.semesterFiles && (
-                  <div className="grid grid-cols-4 gap-2 mt-4">
-                    {sheet.semesterFiles.map((semUrl, semIndex) => (
-                      <a
-                        key={semIndex}
-                        href={semUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-green-500 hover:bg-green-600 text-white text-xs py-1 rounded text-center transition"
-                      >
-                        Sem {semIndex + 1}
-                      </a>
-                    ))}
-                  </div>
-                )}
-
-                {(sheet.title.includes("10th") ||
-                  sheet.title.includes("12th")) && (
-                  <a
-                    href={sheet.fileUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 block bg-green-500 hover:bg-green-600 text-white text-center text-sm py-2 rounded-md transition-all duration-300"
-                  >
-                    View Full Marksheet
-                  </a>
-                )}
-              </motion.div>
-            ))}
           </div>
         </motion.div>
       </section>

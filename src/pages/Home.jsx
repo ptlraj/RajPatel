@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Robot from "../pages/Robot"; // Importing the Robot component
 import profilePictureUrl from "/images/profile.jpg"; // Update this path to your actual image
+
 // Typewriter component for dynamic text display
 const Typewriter = ({
   words,
@@ -73,8 +74,6 @@ const Typewriter = ({
 };
 
 const Home = () => {
-  // Placeholder for your profile picture URL
-
   // You can replace this with a real image path or a dynamic image URL
   return (
     // Main container for the home page, styled with Tailwind.
@@ -87,7 +86,7 @@ const Home = () => {
       {/* Hero Section - now acts as the centered glass-effect box */}
       <section
         className="flex flex-col md:flex-row items-center justify-between py-16 px-6 md:px-12 bg-white/10 backdrop-blur-lg rounded-2xl shadow-xl space-y-8 md:space-y-0 md:space-x-12
-             max-w-6xl w-full transition-all duration-300 ease-in-out hover:shadow-2xl text-center border border-white/20 overflow-hidden"
+              max-w-6xl w-full transition-all duration-300 ease-in-out hover:shadow-2xl text-center border border-white/20 overflow-hidden"
         style={{
           boxShadow: `
       inset 0 0 30px rgba(0, 0, 0, 0.4),
@@ -149,7 +148,7 @@ const Home = () => {
             </a>
             <a
               href="#contact" // Linked to the contact section below
-              className="inline-flex items-center px-8 py-3 border border-indigo-400 text-base font-medium rounded-full text-indigo-300 bg-transparent hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
             >
               Get in Touch
               {/* Lucide React Mail icon for visual appeal */}

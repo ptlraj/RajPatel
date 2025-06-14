@@ -46,41 +46,41 @@ function Projects() {
       video: "https://www.youtube.com/embed/QHZq7p-AxXY?si=cmGrAfuVM-AJZ3uL",
       technologies: ["React", "Tailwind CSS", "Local Storage"],
     },
-    {
-      title: "Portfolio Website",
-      shortDescription:
-        "Modern portfolio with animations and responsive design.",
-      fullDescription:
-        "Responsive portfolio built using React and Tailwind CSS, includes Framer Motion animations, and downloadable resume.",
-      github: "https://github.com/ptlraj/Employee-Management-System",
-      video: "https://www.youtube.com/embed/QHZq7p-AxXY?si=cmGrAfuVM-AJZ3uL",
-      technologies: [
-        "React",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Spline(3D Objects)",
-      ],
-    },
-    {
-      title: "Smart Car Parking System",
-      shortDescription:
-        "Remote-controlled car with ultrasonic sensors for parking.",
-      fullDescription:
-        "Developed a remote-controlled car using the Blynk platform, enabling directional movement via mobile device. Integrated ultrasonic sensors for object detection, enhancing parking precision and obstacle avoidance. Hardware components: ESP8266, Motor driver, DC motor, Servo motor, Ultrasonic Sensor, etc.",
-      github: "https://github.com/yourusername/task-manager-app",
-      video:
-        "https://www.youtube.com/embed/XjC9D_EBVIM?si=ThZ7xKD4T4NaduD2&amp;start=1",
-      technologies: [
-        "Iot",
-        "Blynk",
-        "Arduino IDE",
-        "ESP8266",
-        "Motor Driver",
-        "DC Motor",
-        "Servo Motor",
-        "Ultrasonic Sensor",
-      ],
-    },
+    // {
+    //   title: "Portfolio Website",
+    //   shortDescription:
+    //     "Modern portfolio with animations and responsive design.",
+    //   fullDescription:
+    //     "Responsive portfolio built using React and Tailwind CSS, includes Framer Motion animations, and downloadable resume.",
+    //   github: "https://github.com/ptlraj/Employee-Management-System",
+    //   video: "https://www.youtube.com/embed/QHZq7p-AxXY?si=cmGrAfuVM-AJZ3uL",
+    //   technologies: [
+    //     "React",
+    //     "Tailwind CSS",
+    //     "Framer Motion",
+    //     "Spline(3D Objects)",
+    //   ],
+    // },
+    // {
+    //   title: "Smart Car Parking System",
+    //   shortDescription:
+    //     "Remote-controlled car with ultrasonic sensors for parking.",
+    //   fullDescription:
+    //     "Developed a remote-controlled car using the Blynk platform, enabling directional movement via mobile device. Integrated ultrasonic sensors for object detection, enhancing parking precision and obstacle avoidance. Hardware components: ESP8266, Motor driver, DC motor, Servo motor, Ultrasonic Sensor, etc.",
+    //   github: "https://github.com/yourusername/task-manager-app",
+    //   video:
+    //     "https://www.youtube.com/embed/XjC9D_EBVIM?si=ThZ7xKD4T4NaduD2&start=1",
+    //   technologies: [
+    //     "Iot",
+    //     "Blynk",
+    //     "Arduino IDE",
+    //     "ESP8266",
+    //     "Motor Driver",
+    //     "DC Motor",
+    //     "Servo Motor",
+    //     "Ultrasonic Sensor",
+    //   ],
+    // },
   ];
 
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -180,7 +180,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="bg-gradient-to-b from-black via-gray-900 to-blue-950 text-white  min-h-screen flex items-center py-16" // Added pt-24 for header clearance
+      className="bg-gradient-to-b from-black via-gray-900 to-blue-950 text-white min-h-screen flex items-center py-16 pt-24" // Added pt-24 for more top padding
     >
       <motion.div
         className="container mx-auto px-4"
@@ -189,7 +189,9 @@ function Projects() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold mb-12 text-center text-blue-400">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-blue-400">
+          {" "}
+          {/* Decreased text size */}
           My Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -253,65 +255,6 @@ function Projects() {
               ></iframe>
             </div>
           ))}
-        </div>
-
-        {/* Gemini API Integration: Project Idea Generator - Now centered! */}
-        <div className="mt-20 pt-10 border-t border-gray-700 flex flex-col items-center">
-          <h3 className="text-2xl sm:text-3xl font-bold text-blue-400 text-center mb-6">
-            Need a Project Idea? ✨
-          </h3>
-          <p className="text-gray-300 mb-8 max-w-2xl text-center">
-            Click the button below to get an innovative project idea generated
-            by Google Gemini, relevant to modern trends and suitable for anyone!
-          </p>
-          <button
-            onClick={generateProjectIdea}
-            disabled={isLoadingIdea}
-            className="inline-flex items-center px-8 py-4 bg-purple-600 text-white text-xl font-medium rounded-full shadow-lg
-                       hover:bg-purple-700 transition duration-300 transform hover:-translate-y-1 hover:scale-105
-                       focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {isLoadingIdea ? (
-              <span className="flex items-center">
-                <svg
-                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  ></circle>
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                  ></path>
-                </svg>
-                Generating Idea...
-              </span>
-            ) : (
-              "✨ Generate Project Idea ✨"
-            )}
-          </button>
-
-          {errorIdea && (
-            <p className="text-red-400 mt-4 text-sm text-center">{errorIdea}</p>
-          )}
-
-          {projectIdea && (
-            <div className="mt-8 p-6 bg-black/20 rounded-lg text-left border border-gray-700 animate-fade-in-up max-w-2xl mx-auto">
-              <h4 className="text-xl font-semibold text-white mb-3">
-                Your Next Project Idea:
-              </h4>
-              <p className="text-gray-200 whitespace-pre-wrap">{projectIdea}</p>
-            </div>
-          )}
         </div>
       </motion.div>
     </section>

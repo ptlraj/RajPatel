@@ -192,7 +192,9 @@ const Skills = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-12 tracking-tight drop-shadow-md">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 tracking-tight drop-shadow-md">
+          {" "}
+          {/* Adjusted text sizes here */}
           My Skills
         </h2>
         <motion.ul
