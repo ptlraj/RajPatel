@@ -1,6 +1,29 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// 🔁 Step 1: Import all images from src/images/
+import reactImg from "../images/react.png";
+import nodeImg from "../images/node.png";
+import expressImg from "../images/express.png";
+import mongoImg from "../images/mongo.png";
+import phpImg from "../images/php.png";
+import laravelImg from "../images/laravel.png";
+import jqueryImg from "../images/jquery.png";
+import angularImg from "../images/angular.png";
+import htmlImg from "../images/html.png";
+import cssImg from "../images/css.png";
+import jsImg from "../images/javascript.png";
+import postgresImg from "../images/postgre.png";
+import mysqlImg from "../images/mysql.png";
+import tailwindImg from "../images/tailwindcss.png";
+import bootstrapImg from "../images/bootstrap.png";
+import arduinoImg from "../images/arduino.png";
+import gitImg from "../images/git.png";
+import githubImg from "../images/github.png";
+import vscodeImg from "../images/vscode.png";
+import blenderImg from "../images/blender.png";
+import davinciImg from "../images/davinci-resolve.png";
+
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -26,118 +49,115 @@ const cardHover = {
   transition: { duration: 0.3, ease: "easeOut" },
 };
 
+// 🔁 Step 2: Define skills array using imported images
 const skills = [
   {
     name: "React.js",
-    bg: "../images/react.png",
+    bg: reactImg,
     color: "bg-gradient-to-br from-cyan-400 to-blue-600",
   },
   {
     name: "Node.js",
-    bg: "../images/node.png",
+    bg: nodeImg,
     color: "bg-gradient-to-br from-green-500 to-green-700",
   },
   {
     name: "Express.js",
-    bg: "../images/express.png",
+    bg: expressImg,
     color: "bg-gradient-to-br from-green-500 to-green-700",
   },
   {
     name: "MongoDb",
-    bg: "../images/mongo.png",
+    bg: mongoImg,
     color: "bg-gradient-to-br from-green-500 to-green-700",
   },
   {
     name: "PHP",
-    bg: "../images/php.png",
+    bg: phpImg,
     color: "bg-gradient-to-br from-purple-500 to-purple-700",
   },
   {
     name: "Laravel",
-    bg: "../images/laravel.png",
+    bg: laravelImg,
     color: "bg-gradient-to-br from-yellow-400 to-yellow-600",
   },
   {
-    name: "jquery",
-    bg: "../images/jquery.png",
+    name: "jQuery",
+    bg: jqueryImg,
     color: "bg-gradient-to-br from-yellow-400 to-yellow-600",
   },
   {
     name: "Angular",
-    bg: "../images/Angular.png",
-    color: "bg-gradient-to-br from-yellow-400 to-yellow-600",
+    bg: angularImg,
+    color: "bg-gradient-to-br from-red-400 to-red-600",
   },
   {
     name: "HTML",
-    bg: "../images/html.png",
+    bg: htmlImg,
     color: "bg-gradient-to-br from-orange-400 to-orange-600",
   },
   {
     name: "CSS",
-    bg: "../images/css.png",
+    bg: cssImg,
     color: "bg-gradient-to-br from-blue-500 to-blue-700",
   },
   {
     name: "JavaScript",
-    bg: "../images/javascript.png",
+    bg: jsImg,
     color: "bg-gradient-to-br from-yellow-400 to-yellow-600",
   },
   {
-    name: "postgresql",
-    bg: "../images/postgre.png",
+    name: "PostgreSQL",
+    bg: postgresImg,
     color: "bg-gradient-to-br from-blue-500 to-blue-700",
   },
   {
     name: "MySQL",
-    bg: "../images/mysql.png",
+    bg: mysqlImg,
     color: "bg-gradient-to-br from-blue-500 to-blue-700",
   },
   {
-    name: "MongoDb",
-    bg: "../images/mongo.png",
-    color: "bg-gradient-to-br from-green-500 to-green-700",
-  },
-  {
     name: "Tailwind CSS",
-    bg: "../images/tailwindcss.png",
+    bg: tailwindImg,
     color: "bg-gradient-to-br from-blue-500 to-blue-700",
   },
   {
     name: "Bootstrap",
-    bg: "../images/bootstrap.png",
-    color: "bg-gradient-to-br from-blue-500 to-blue-700",
+    bg: bootstrapImg,
+    color: "bg-gradient-to-br from-indigo-500 to-purple-700",
   },
   {
     name: "Arduino IDE",
-    bg: "../images/arduino.png",
+    bg: arduinoImg,
     color: "bg-gradient-to-br from-blue-500 to-blue-700",
   },
   {
     name: "Git",
-    bg: "../images/git.png",
-    color: "bg-gradient-to-br from-blue-500 to-blue-700",
+    bg: gitImg,
+    color: "bg-gradient-to-br from-orange-400 to-red-500",
   },
   {
-    name: "Git Hub",
-    bg: "../images/github.png",
-    color: "bg-gradient-to-br from-blue-500 to-blue-700",
+    name: "GitHub",
+    bg: githubImg,
+    color: "bg-gradient-to-br from-gray-800 to-black",
   },
   {
-    name: "Vs Code",
-    bg: "../images/vscode.png",
+    name: "VS Code",
+    bg: vscodeImg,
     color: "bg-gradient-to-br from-blue-500 to-blue-700",
   },
   {
     name: "Blender",
-    bg: "../images/blender.png",
-    color: "bg-gradient-to-br from-blue-500 to-blue-700",
+    bg: blenderImg,
+    color: "bg-gradient-to-br from-orange-500 to-orange-700",
   },
   {
     name: "Davinci Resolve",
-    bg: "../images/davinci-resolve.png",
-    color: "bg-gradient-to-br from-blue-500 to-blue-700",
+    bg: davinciImg,
+    color: "bg-gradient-to-br from-gray-700 to-gray-900",
   },
 ];
+
 const SkillCard = ({ skill }) => {
   return (
     <motion.li
@@ -151,7 +171,7 @@ const SkillCard = ({ skill }) => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className={`w-28 h-32 ${skill.color} rounded-xl flex items-center justify-center shadow-lg  relative overflow-hidden py-4 box-shadow-[0_0_15px_rgba(34,211,238,0.5)]`}
+        className={`w-28 h-32 ${skill.color} rounded-xl flex items-center justify-center shadow-lg relative overflow-hidden py-4`}
       ></div>
       <span className="text-lg font-semibold text-white tracking-wide">
         {skill.name}
