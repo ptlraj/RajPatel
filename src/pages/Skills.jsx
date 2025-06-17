@@ -22,6 +22,7 @@ import githubImg from "/images/github.png";
 import vscodeImg from "/images/vscode.png";
 import blenderImg from "/images/blender.png";
 import davinciImg from "/images/davinci-resolve.png";
+import jiraImg from "/images/jira.png";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -143,6 +144,11 @@ const skills = [
     name: "VS Code",
     bg: vscodeImg,
     color: "bg-gradient-to-br from-blue-500 to-blue-700",
+  },
+  {
+    name: "Jira",
+    bg: jiraImg,
+    color: "bg-gradient-to-br from-gray-700 to-gray-900",
   },
   {
     name: "Blender",
